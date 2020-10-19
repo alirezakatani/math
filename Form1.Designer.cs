@@ -49,6 +49,8 @@
             this.datalable = new System.Windows.Forms.Label();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.label9 = new System.Windows.Forms.Label();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -66,7 +68,7 @@
             // txtnumdata
             // 
             this.txtnumdata.Location = new System.Drawing.Point(350, 48);
-            this.txtnumdata.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.txtnumdata.Margin = new System.Windows.Forms.Padding(5);
             this.txtnumdata.Name = "txtnumdata";
             this.txtnumdata.Size = new System.Drawing.Size(185, 34);
             this.txtnumdata.TabIndex = 1;
@@ -205,7 +207,7 @@
             this.txtenheraf.Location = new System.Drawing.Point(543, 410);
             this.txtenheraf.Name = "txtenheraf";
             this.txtenheraf.ReadOnly = true;
-            this.txtenheraf.Size = new System.Drawing.Size(132, 34);
+            this.txtenheraf.Size = new System.Drawing.Size(140, 34);
             this.txtenheraf.TabIndex = 17;
             // 
             // label8
@@ -233,7 +235,7 @@
             // 
             this.datalable.AutoSize = true;
             this.datalable.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            this.datalable.Location = new System.Drawing.Point(740, 125);
+            this.datalable.Location = new System.Drawing.Point(688, 21);
             this.datalable.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.datalable.Name = "datalable";
             this.datalable.Size = new System.Drawing.Size(128, 29);
@@ -246,7 +248,7 @@
             this.comboBox1.Items.AddRange(new object[] {
             "1-gosaste",
             "2-peyvaste"});
-            this.comboBox1.Location = new System.Drawing.Point(926, 53);
+            this.comboBox1.Location = new System.Drawing.Point(509, 220);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(121, 37);
             this.comboBox1.TabIndex = 22;
@@ -255,18 +257,30 @@
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            this.label9.Location = new System.Drawing.Point(740, 56);
+            this.label9.Location = new System.Drawing.Point(373, 223);
             this.label9.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(110, 29);
             this.label9.TabIndex = 23;
             this.label9.Text = "data type";
             // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(759, 247);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowHeadersWidth = 51;
+            this.dataGridView1.RowTemplate.Height = 24;
+            this.dataGridView1.Size = new System.Drawing.Size(864, 365);
+            this.dataGridView1.TabIndex = 24;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(14F, 29F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1167, 526);
+            this.ClientSize = new System.Drawing.Size(1652, 624);
+            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.datalable);
@@ -289,9 +303,10 @@
             this.Controls.Add(this.txtnumdata);
             this.Controls.Add(this.label1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            this.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.Margin = new System.Windows.Forms.Padding(5);
             this.Name = "Form1";
             this.Text = "Form1";
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -320,6 +335,7 @@
         private System.Windows.Forms.Label datalable;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.DataGridView dataGridView1;
     }
 }
 

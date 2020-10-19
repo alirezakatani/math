@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 using System.Windows.Forms;
 
 namespace math_project
@@ -14,6 +15,7 @@ namespace math_project
         double miane;
         double cv;
         double miangin;
+        int delta;
 
 
         int[] teadad;
@@ -37,9 +39,12 @@ namespace math_project
 
             }
             data[i] = Convert.ToInt32(txtdata.Text);
+            
+            if (i % 25 == 0)
+                datalable.Text = datalable.Text + "\n";
+           datalable.Text = datalable.Text + " " + data[i] + ",";
+           txtdata.Text = "";
             i++;
-            datalable.Text = datalable.Text + " " + data[i] + ",";
-            txtdata.Text = "";
 
 
         }
@@ -54,22 +59,30 @@ namespace math_project
         {
             double sum = 0;
             double tavan2 = 0;
+            int[] tea = { 0 };
             {
-                if (comboBox1.Text == "gosaste")
+                double temp;
+                for (int i = 0; i < num; i++)
                 {
+                    if(data[i+1]<data[i])
+                    {
+                        temp = data[i];
+                        data[i] = data[i + 1];
+                        data[i + 1] = temp;
+                    }
+
+                }
+            }//sort
+            {
+                
                     if (num % 2 == 0)
                         miane = (data[(num / 2) - 1] + data[(num / 2)]) / 2;
                     else
                         miane = data[num / 2];
-                }
-                else
-                {
-
-                }
+                
+              
 
             }//miane
-
-
             {
 
                 for (int i = 0; i < num; i++)
@@ -94,6 +107,20 @@ namespace math_project
             {
                 cv = enheraf / miangin;
             }//cv
+            {
+                if(comboBox1.Text=="gosaste")
+                {
+                    delta = (int)data.Max() - (int)data.Min();
+                    tea = new int[delta];
+                    for(i=0;i<delta;i++)
+                    {
+                        tea[(int)data[i]]++;
+                    }
+                   
+                }
+                mod = tea.Max();
+                
+            }//mod
 
 
 
@@ -104,6 +131,11 @@ namespace math_project
         private void chart1_Click(object sender, EventArgs e)
         {
            
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }
