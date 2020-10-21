@@ -45,11 +45,14 @@
             this.txtmiane = new System.Windows.Forms.TextBox();
             this.txtenheraf = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnapply = new System.Windows.Forms.Button();
             this.datalable = new System.Windows.Forms.Label();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.label9 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.btnmohasebe = new System.Windows.Forms.Button();
+            this.btndelete = new System.Windows.Forms.Button();
+            this.btnres = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -77,7 +80,7 @@
             // 
             this.btnadd.Location = new System.Drawing.Point(559, 122);
             this.btnadd.Name = "btnadd";
-            this.btnadd.Size = new System.Drawing.Size(100, 34);
+            this.btnadd.Size = new System.Drawing.Size(124, 34);
             this.btnadd.TabIndex = 2;
             this.btnadd.Text = "add";
             this.btnadd.UseVisualStyleBackColor = true;
@@ -204,32 +207,32 @@
             // txtenheraf
             // 
             this.txtenheraf.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.txtenheraf.Location = new System.Drawing.Point(543, 410);
+            this.txtenheraf.Location = new System.Drawing.Point(192, 512);
             this.txtenheraf.Name = "txtenheraf";
             this.txtenheraf.ReadOnly = true;
-            this.txtenheraf.Size = new System.Drawing.Size(140, 34);
+            this.txtenheraf.Size = new System.Drawing.Size(161, 34);
             this.txtenheraf.TabIndex = 17;
             // 
             // label8
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            this.label8.Location = new System.Drawing.Point(356, 410);
+            this.label8.Location = new System.Drawing.Point(5, 512);
             this.label8.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(179, 29);
             this.label8.TabIndex = 16;
             this.label8.Text = "enheraf meayar";
             // 
-            // button1
+            // btnapply
             // 
-            this.button1.Location = new System.Drawing.Point(559, 48);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(100, 34);
-            this.button1.TabIndex = 18;
-            this.button1.Text = "Apply";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.btnapply.Location = new System.Drawing.Point(559, 48);
+            this.btnapply.Name = "btnapply";
+            this.btnapply.Size = new System.Drawing.Size(124, 34);
+            this.btnapply.TabIndex = 18;
+            this.btnapply.Text = "Apply";
+            this.btnapply.UseVisualStyleBackColor = true;
+            this.btnapply.Click += new System.EventHandler(this.button1_Click);
             // 
             // datalable
             // 
@@ -248,7 +251,7 @@
             this.comboBox1.Items.AddRange(new object[] {
             "1-gosaste",
             "2-peyvaste"});
-            this.comboBox1.Location = new System.Drawing.Point(509, 220);
+            this.comboBox1.Location = new System.Drawing.Point(559, 255);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(121, 37);
             this.comboBox1.TabIndex = 22;
@@ -257,7 +260,7 @@
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            this.label9.Location = new System.Drawing.Point(373, 223);
+            this.label9.Location = new System.Drawing.Point(386, 258);
             this.label9.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(110, 29);
@@ -267,24 +270,61 @@
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(759, 247);
+            this.dataGridView1.Location = new System.Drawing.Point(765, 186);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(864, 365);
+            this.dataGridView1.Size = new System.Drawing.Size(821, 365);
             this.dataGridView1.TabIndex = 24;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            // 
+            // btnmohasebe
+            // 
+            this.btnmohasebe.Enabled = false;
+            this.btnmohasebe.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            this.btnmohasebe.Location = new System.Drawing.Point(559, 162);
+            this.btnmohasebe.Name = "btnmohasebe";
+            this.btnmohasebe.Size = new System.Drawing.Size(124, 34);
+            this.btnmohasebe.TabIndex = 26;
+            this.btnmohasebe.Text = "mohasebe";
+            this.btnmohasebe.UseVisualStyleBackColor = true;
+            this.btnmohasebe.Click += new System.EventHandler(this.button3_Click);
+            // 
+            // btndelete
+            // 
+            this.btndelete.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            this.btndelete.Location = new System.Drawing.Point(559, 202);
+            this.btndelete.Name = "btndelete";
+            this.btndelete.Size = new System.Drawing.Size(124, 34);
+            this.btndelete.TabIndex = 27;
+            this.btndelete.Text = "DeleteAll";
+            this.btndelete.UseVisualStyleBackColor = true;
+            this.btndelete.Click += new System.EventHandler(this.btndelete_Click);
+            // 
+            // btnres
+            // 
+            this.btnres.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            this.btnres.Location = new System.Drawing.Point(391, 329);
+            this.btnres.Name = "btnres";
+            this.btnres.Size = new System.Drawing.Size(124, 34);
+            this.btnres.TabIndex = 28;
+            this.btnres.Text = "AppRestart";
+            this.btnres.UseVisualStyleBackColor = true;
+            this.btnres.Click += new System.EventHandler(this.button1_Click_1);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(14F, 29F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1652, 624);
+            this.ClientSize = new System.Drawing.Size(1652, 569);
+            this.Controls.Add(this.btnres);
+            this.Controls.Add(this.btndelete);
+            this.Controls.Add(this.btnmohasebe);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.datalable);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnapply);
             this.Controls.Add(this.txtenheraf);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.txtmiane);
@@ -306,6 +346,7 @@
             this.Margin = new System.Windows.Forms.Padding(5);
             this.Name = "Form1";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -331,11 +372,14 @@
         private System.Windows.Forms.TextBox txtmiane;
         private System.Windows.Forms.TextBox txtenheraf;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnapply;
         private System.Windows.Forms.Label datalable;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.Button btnmohasebe;
+        private System.Windows.Forms.Button btndelete;
+        private System.Windows.Forms.Button btnres;
     }
 }
 
