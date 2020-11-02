@@ -1,0 +1,2 @@
+﻿1>------ Build started: Project: math project, Configuration: Debug Any CPU ------
+========== Build: 1 succeeded, 0 failed, 0 up-to-date, 0 skipped ==========

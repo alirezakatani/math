@@ -53,21 +53,28 @@ namespace math_project
 
         private void btnadd_Click(object sender, EventArgs e)
         {
-
-           
-            
-                data[i] = Convert.ToInt32(txtdata.Text);
-
-            if (i % 25 == 0)
-                datalable.Text = datalable.Text + "\n";
-            datalable.Text = datalable.Text + " " + data[i] + ",";
-            txtdata.Text = "";
-            i++;
-            if(i==num)
+            if (i >= num)
             {
                 btnadd.Enabled = false;
                 btnmohasebe.Enabled = true;
+                btnmohasebe.Focus();
+                button3_Click(null,null);
+                fillgred();
             }
+            else
+            {
+                data[i] = Convert.ToDouble(txtdata.Text);
+
+                if (i % 25 == 0)
+                    datalable.Text = datalable.Text + "\n";
+                datalable.Text = datalable.Text + " " + data[i] + ",";
+                txtdata.Text = "";
+                i++;
+            }
+            
+
+          
+            
 
             
             
@@ -197,7 +204,7 @@ namespace math_project
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            conn.ConnectionString = @"Data Source = (LocalDB)\MSSQLLocalDB; AttachDbFilename = D:\c# lrearning\New folder\math project\Database1.mdf; Integrated Security = True";
+            conn.ConnectionString = @"Data Source = (LocalDB)\MSSQLLocalDB; AttachDbFilename ="+Application.StartupPath+@"\Database1.mdf; Integrated Security = True";
             conn.Open();
             fillgred();
         }
@@ -292,12 +299,42 @@ namespace math_project
             c1.CommandText = "DELETE FROM tblmath";
             c1.ExecuteNonQuery();
             fillgred();
+            
 
         }
 
         private void button1_Click_1(object sender, EventArgs e)
         {
             Application.Restart();
+        }
+
+        private void Form1_KeyUp(object sender, KeyEventArgs e)
+       
+        
+        
+        
+        
+        {
+           
+            
+            if(e.KeyCode==Keys.Enter)
+            {
+                if(btnapply.Enabled==true)
+                {
+                    button1_Click(null,null);
+                    
+                }
+                else if(btnadd.Enabled=true)
+                {
+                    btnadd_Click(null, null);
+
+                }
+                else
+                {
+                    button3_Click(null, null);
+
+                }
+            }
         }
     }
 }
